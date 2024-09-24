@@ -7,9 +7,13 @@ RecipeCraft is an innovative online platform designed to make sharing and discov
 Features
 
 Browse Recipes: Explore a diverse collection of recipes from various cuisines and categories.
+
 Submit Recipes: Share your own culinary creations with the community.
+
 Manage Recipes: Edit and update your submitted recipes as needed.
+
 Search Functionality: Find recipes quickly using our powerful search feature.
+
 User Profiles: Create and manage user profiles to track your contributions and favorites.
 
 
@@ -17,10 +21,15 @@ User Profiles: Create and manage user profiles to track your contributions and f
 Technologies
 
 RecipeCraft is built using the following technologies:
+
 Frontend: HTML, CSS (Bootstrap), JavaScript
+
 Backend: Django (Python)
+
 Database: SQLite
+
 Version Control: Git
+
 Deployment: Heroku/AWS (if applicable)
 
 
@@ -38,4 +47,5 @@ Contact
 For any questions or inquiries, please feel free to reach out:
 
 Email: salmaouakhir20@gmail.com
+
 GitHub: Red-Rim
