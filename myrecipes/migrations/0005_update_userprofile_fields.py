@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('recipecraft', '0004_userprofile'),
+        ('recipecraft', '0004_create_userprofile'),
     ]
 
     operations = [
