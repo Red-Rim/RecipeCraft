@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}
+    RecipeCraft - Recipe Details
+{% endblock title %}
+{% block start %}
+
+<!-- View Recipes -->
+<div style="padding: 2%;">
+    <h2>{{recipes.recipe_name}}</h2>
+    <div id="passwordHelpBlock" class="form-text">
+      &nbsp;&nbsp;Created by: {{recipes.user.first_name}}<br>
+      &nbsp;&nbsp;Created on: {{recipes.created_at}}
+    </div>
+</div>
+
+<div style="padding: 2%; text-align: justify;">
+    <img src="/media/{{recipes.recipe_image}}" alt="Recipe Image" width="400px" height="400px" style="border-radius: 10%; max-width: 100%; height: auto;">
+    <p style="padding-top: 1%; text-align: justify;">
+      {{recipes.recipe_description}}
+    </p>
+    <h3>Ingredients:</h3>
+    <ul>
+      {% for ingredient in ingredients %}
+        <li>{{ ingredient }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Instructions:</h3>
+    <ol>
+      {% for instruction in instructions %}
+        <li>{{ instruction }}.</li>
+      {% endfor %}
+    </ol>
+
+    <p><strong>Cooking Time:</strong> {{recipes.cooking_time}} minutes</p>
+    <p><strong>Average Rating:</strong> {{recipes.average_rating}}/5</p>
+</div>
+
+<!-- Comment Box -->
+<div style="padding: 3%;">
+    <hr>
+    <div class="card">
+        <h3 class="card-header">Comments</h3>
+        {% for comment in comments %}
+        <div class="card-body">
+            <h6 class="card-title">{{ comment.content }}</h6>
+            <div class="text-muted">
+              Posted by {{ comment.user.username }} on {{ comment.created_at }}
+            </div>
+        </div>
+        {% empty %}
+        <p style="padding: 2%;">No comments yet. Be the first to comment!</p>
+        {% endfor %}
+    </div>
+    <hr>
+
+    <!-- Rating Form -->
+    {% if request.user != recipes.user %}
+    <div class="rating-form">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if messages %}
+            <div class="alert alert-primary" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <label for="rating" class="form-label">Rate this recipe:</label><br>
+            <div style="display: flex; flex-direction: row;">
+                {% for i in 1|to:5 %}
+                <input type="radio" id="rating{{ i }}" name="score" value="{{ i }}" required>
+                <label for="rating{{ i }}">{{ i }}</label>&nbsp;&nbsp;
+                {% endfor %}
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success">Submit Rating</button>
+        </form>
+    </div>
+    {% endif %}
+
+    <!-- Comment Form -->
+    <div class="comment-form">
+        <h4>Leave a Comment</h4>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <textarea class="form-control" name="content" placeholder="Share your thoughts (Max 300 chars)" maxlength="300" minlength="2"></textarea>
+            <br>
+            <button type="submit" class="btn btn-success">Post Comment</button>
+        </form>
+    </div>
+</div>
+<hr>
+
+<!-- Footer -->
+<footer style="background-color: #f5f5f5; padding: 20px; text-align: center;">
+    <p style="color: #555;">© 2024 RecipeCraft. All rights reserved.</p>
+</footer>
+
+{% endblock %}
