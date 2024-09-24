@@ -7,7 +7,7 @@ from django.db import migrations, models # type: ignore
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('myrecpies', '0002_alter_rating_score'),
+        ('recipecraft', '0002_alter_rating_score'),
     ]
 
     operations = [

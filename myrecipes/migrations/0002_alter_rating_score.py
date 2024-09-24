@@ -7,7 +7,7 @@ from django.db import migrations, models # type: ignore
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('recipecraft', '0001_initial'),  # Change 'myrecpies' to 'recipecraft'
+        ('recipecraft', '0001_initial'),
     ]
 
     operations = [
