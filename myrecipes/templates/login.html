@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+    RecipeCraft
+{% endblock title %}
+
+{% block start %}
+<div class="mt-5">
+    <center>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="padding-left: 5%;padding-right: 5%;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="{{ MEDIA_URL }}image/banner1.jpg" class="d-block w-100 carousel-img" alt="Chicken Dishes" style="border-radius: 3%; max-height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h4 style="font-size: xx-large; color: white;">Chicken Dishes</h4>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{{ MEDIA_URL }}image/banner2.jpg" class="d-block w-100 carousel-img" alt="Biriyani" style="border-radius: 3%; max-height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h4 style="font-size: xx-large; color: white;">Biriyani</h4>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ MEDIA_URL }}image/banner3.jpg" class="d-block w-100 carousel-img" alt="Continental" style="border-radius: 3%; max-height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h4 style="font-size: xx-large; color: white;">Continental</h4>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </center>
+</div>
+
+{% include 'card.html' %}
+
+{% endblock %}
