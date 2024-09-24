@@ -4,6 +4,8 @@ RecipeCraft is an innovative online platform designed to make sharing and discov
 
 
 
+
+
 _________________________Features__________________________
 
 Browse Recipes: Explore a diverse collection of recipes from various cuisines and categories.
@@ -15,6 +17,8 @@ Manage Recipes: Edit and update your submitted recipes as needed.
 Search Functionality: Find recipes quickly using our powerful search feature.
 
 User Profiles: Create and manage user profiles to track your contributions and favorites.
+
+
 
 
 
@@ -34,11 +38,15 @@ Deployment: Heroku/AWS (if applicable)
 
 
 
+
+
 _____________________License_______________________
 
 RecipeCraft is licensed under the MIT License. This allows you to freely use, modify, and distribute the software, with the only restriction being the inclusion of the same license in all copies or substantial portions of the software.
 
 For more details, please refer to the LICENSE file in the repository.
+
+
 
 
 
