@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #'recipecraft.apps.RecipeCraftConfig',
     'recipecraft',  # Add your RecipeCraft app here
-    'myrecipes',
+    #'myrecipes',
 ]
 
 MIDDLEWARE = [
