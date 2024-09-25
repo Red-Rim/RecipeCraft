@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Models related to recipes, ratings, comments, and user profiles
+# Models related to recipes, ratings, comments & profiles
 
 class Recipe(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

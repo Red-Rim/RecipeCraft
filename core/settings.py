@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'recipecraft.apps.RecipeCraftConfig',
     'recipecraft',  # Add your RecipeCraft app here
     'myrecipes',
 ]
@@ -126,8 +127,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'public/static')
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'public/static')
 
 
 # Default primary key field type
