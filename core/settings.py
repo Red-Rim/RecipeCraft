@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recipecraft.apps.RecipeCraftConfig',
+    #'recipecraft.apps.RecipeCraftConfig',
     'recipecraft',  # Add your RecipeCraft app here
     'myrecipes',
 ]
@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'recipecraft.urls'
+#ROOT_URLCONF = 'recipecraft.urls'
 
 TEMPLATES = [
     {
