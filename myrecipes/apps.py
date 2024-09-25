@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+#from django.apps import AppConfig
 
-class RecipeCraftConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'recipecraft'
+#class RecipeCraftConfig(AppConfig):
+ #   default_auto_field = 'django.db.models.BigAutoField'
+  #  name = 'recipecraft'
