@@ -5,7 +5,7 @@
 {% block start %}
 
 <div class="mb-3">
-    <form class="d-flex mb-3" style="padding: 3% 3% 1% 3%;">
+   <form class="d-flex mb-3" style="padding-top:3%;padding-left: 3%;padding-right: 3%;padding-bottom: 1%;">
         <input class="form-control me-2" type="search" placeholder="I want to make..." aria-label="Search" name="search">
         <button class="btn btn-warning" type="submit">Search</button>
     </form>
@@ -16,7 +16,7 @@
     {% include 'card.html' %}
 {% else %}
 <div class="d-flex justify-content-center align-items-center" style="height: 60vh;">
-    <div class="card h-100" style="width: 25rem; height: 20rem; text-align: center; border-color: #000; font-family: 'Segoe UI', sans-serif;">
+    <div class="card h-100" style="width: 25rem; height: 20rem; text-align: center; border-color: #444; font-family: 'Segoe UI', sans-serif;">
         <div class="card-body">
             <h5 class="card-title">OOPS!<br> NO MATCHES.</h5>
             <p class="card-text">Try some other keywords instead.</p>
