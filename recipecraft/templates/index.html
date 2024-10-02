@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %} <!-- Add this line to load the static tag -->
 
 {% block title %}
     RecipeCraft
@@ -15,20 +16,19 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="{{ MEDIA_URL }}media/image/chicken.jpg" class="d-block w-50 carousel-img" alt="Chicken">
+                    <img src="{% static 'media/image/chicken.jpg' %}" class="d-block w-50 carousel-img" alt="Chicken">
                     <div class="carousel-caption d-none d-md-block">
                         <h4 style="font-size: xx-large; color: white;">Chicken</h4>
                     </div>
                 </div>
-                <div class="carousel-item" datrecipecraft/media/image/chicken.jpga-bs-interval="2000">
-                    <img src="{{ MEDIA_URL }}media/image/couscous.jpg" class="d-block w-50 carousel-img" alt="Couscous">
-
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{% static 'media/image/couscous.jpg' %}" class="d-block w-50 carousel-img" alt="Couscous">
                     <div class="carousel-caption d-none d-md-block">
                         <h4 style="font-size: xx-large; color: white;">Couscous</h4>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}media/image/pizza.jpg" class="d-block w-50 carousel-img" alt="Pizza">
+                    <img src="{% static 'media/image/pizza.jpg' %}" class="d-block w-50 carousel-img" alt="Pizza">
                     <div class="carousel-caption d-none d-md-block">
                         <h4 style="font-size: xx-large; color: white;">Pizza</h4>
                     </div>
@@ -46,7 +46,5 @@
     </center>
 </div>
 
-
 {% include 'card.html' %}
-
 {% endblock %}
