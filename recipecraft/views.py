@@ -21,7 +21,7 @@ def add_recipe(request):
         data = request.POST
         recipe_name = data.get('recipe_name')
         recipe_description = data.get('recipe_description')
-        recipe_ingridents = data.get('recipe_ingridents')
+        recipe_ingredients = data.get('recipe_ingredients')
         instructions = data.get('instructions')
         cooking_time = data.get('cooking_time')
         recipe_image = request.FILES.get('recipe_image')
@@ -30,7 +30,7 @@ def add_recipe(request):
             user = request.user,
             recipe_image = recipe_image,
             recipe_name = recipe_name,
-            recipecraft_ingridents = recipe_ingridents ,
+            recipecraft_ingredients = recipe_ingredients ,
             recipe_description = recipe_description,
             instructions = instructions,
             cooking_time = cooking_time,
@@ -64,7 +64,7 @@ def update_recipe(request,id):
 
         queryset.recipe_name = recipe_name
         queryset.recipe_description = recipe_description
-        queryset.recipe_ingridents = recipe_ingridents
+        queryset.recipe_ingredients = recipe_ingridents
         queryset.instructions = instructions
         queryset.cooking_time  = cooking_time
 
